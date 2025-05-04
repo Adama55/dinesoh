@@ -1,15 +1,20 @@
 "use client";
 import { useState } from "react";
 import { ShoppingCart, User, Menu, X } from "lucide-react";
+import Image from "next/image";
+import logo from "../logo-bw.png";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="bg-yellow-600 text-white p-4 shadow-md">
+    <header className="bg-[#7AD154] text-black p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
-        <h1 className="text-2xl font-bold">Mon Site</h1>
+        <h1 className="text-2xl font-bold">
+          <Image src={logo} alt="Mon logo" width={60} height={60} />
+          
+          </h1>
 
         {/* Menu Desktop (toujours visible) */}
         <nav className="hidden md:flex space-x-6">
