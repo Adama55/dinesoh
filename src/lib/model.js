@@ -2,11 +2,12 @@
 
 // Modèle de produit
 export class Product {
-    constructor(name, description, price, stock) {
+    constructor(name, description, price, stock, imgUrl) {
       this.name = name;
       this.description = description;
       this.price = price;
       this.stock = stock;
+      this.imgUrl = imgUrl;
     }
   
     // Validation des données du produit

@@ -16,14 +16,14 @@ export async function GET() {
 export async function POST(req) {
     try {
         const body = await req.json();
-        const { name, description, price, stock } = body;
+        const { name, description, price, stock, imgUrl } = body;
 
-        const product = new Product(name, description, price, stock);
+        const product = new Product(name, description, price, stock, imgUrl);
         product.validate(); // Vérification des données
 
         const { data, error } = await supabase
             .from("products")
-            .insert([{ name, description, price, stock }])
+            .insert([{ name, description, price, stock, imgUrl }])
             .select("*");
 
         if (error) {
