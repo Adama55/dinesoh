@@ -2,11 +2,12 @@
 
 // Modèle de produit
 export class Product {
-    constructor(name, description, price, stock) {
+    constructor(name, description, price, stock, imgUrl) {
       this.name = name;
       this.description = description;
       this.price = price;
       this.stock = stock;
+      this.imgUrl = imgUrl;
     }
   
     // Validation des données du produit
@@ -55,12 +56,11 @@ export class Product {
   
   // Modèle d'item de commande
   export class OrderItem {
-    constructor(orderId, productId, quantity, price, imgUrl) {
+    constructor(orderId, productId, quantity, price) {
       this.orderId = orderId;
       this.productId = productId;
       this.quantity = quantity;
       this.price = price;
-      this.imgUrl = imgUrl;
     }
   
     // Validation de l'item de commande
