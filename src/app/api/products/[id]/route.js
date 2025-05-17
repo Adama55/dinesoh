@@ -26,14 +26,14 @@ export async function PUT(req, { params }) {
 
     try {
         const body = await req.json();
-        const { name, description, price, stock } = body;
+        const { name, description, price, stock,imgUrl } = body;
 
-        const product = new Product(name, description, price, stock);
+        const product = new Product(name, description, price, stock, imgUrl);
         product.validate(); // Vérification des données
 
         const { data, error } = await supabase
             .from("products")
-            .update({ name, description, price, stock })
+            .update({ name, description, price, stock, imgUrl })
             .eq("id", id)
             .select("*");
 

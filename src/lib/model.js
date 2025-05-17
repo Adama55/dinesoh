@@ -55,11 +55,12 @@ export class Product {
   
   // Modèle d'item de commande
   export class OrderItem {
-    constructor(orderId, productId, quantity, price) {
+    constructor(orderId, productId, quantity, price, imgUrl) {
       this.orderId = orderId;
       this.productId = productId;
       this.quantity = quantity;
       this.price = price;
+      this.imgUrl = imgUrl;
     }
   
     // Validation de l'item de commande
