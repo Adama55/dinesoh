@@ -13,7 +13,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl font-semibold text-green-700 mb-2">Notre histoire</h2>
             <p className="text-gray-700 leading-relaxed">
-              Fondée en 2025, notre boutique en ligne est née de la volonté de proposer une expérience d’achat simple,
+              Fondée depuis 2020, notre boutique en ligne est née de la volonté de proposer une expérience d’achat simple,
               transparente et de qualité. Depuis nos débuts, nous nous engageons à offrir des produits soigneusement sélectionnés
               pour répondre aux besoins de nos clients.
             </p>
