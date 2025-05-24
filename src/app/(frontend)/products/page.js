@@ -3,12 +3,14 @@ import { useEffect, useState } from "react";
 
 export default function Products() {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // <- État pour le chargement
 
   useEffect(() => {
     fetch("/api/products")
       .then((res) => res.json())
       .then((data) => setProducts(data))
-      .catch((error) => console.error("Erreur de récupération :", error));
+      .catch((error) => console.error("Erreur de récupération :", error))
+      .finally(() => setIsLoading(false)); // <- Fin du chargement
   }, []);
 
   return (
@@ -17,7 +19,11 @@ export default function Products() {
         Nos produits
       </h1>
 
-      {products.length === 0 ? (
+      {isLoading ? (
+        <div className="flex justify-center items-center min-h-[200px]">
+          <div className="w-12 h-12 border-4 border-green-600 border-t-transparent rounded-full animate-spin" />
+        </div>
+      ) : products.length === 0 ? (
         <p className="text-center text-gray-500">Aucun produit disponible pour le moment.</p>
       ) : (
         <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -39,7 +45,6 @@ export default function Products() {
               <button className="mt-6 bg-green-600 text-white py-2 rounded hover:bg-green-700 transition">
                 Voir le produit
               </button>
-              
             </li>
           ))}
         </ul>

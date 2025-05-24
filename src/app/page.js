@@ -16,10 +16,10 @@ export default function Home() {
             Explorez des milliers de produits tendance. Achetez en toute simplicité et sécurité avec une expérience inoubliable.
           </p>
           <div className="flex gap-4">
-            <a href="/shop" className="px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition">
+            <a href="/products" className="px-6 py-3 bg-green-600 text-white rounded-full text-lg font-semibold hover:bg-green-700 transition">
               Commencer vos achats
             </a>
-            <a href="/about" className="px-6 py-3 border border-green-600 text-green-600 rounded-full text-lg font-semibold hover:bg-green-50 transition">
+            <a href="/about-us" className="px-6 py-3 border border-green-600 text-green-600 rounded-full text-lg font-semibold hover:bg-green-50 transition">
               En savoir plus
             </a>
           </div>
