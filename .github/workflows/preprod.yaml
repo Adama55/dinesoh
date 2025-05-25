@@ -1,7 +1,7 @@
 name: Déploiement Preprod
 
 on:
-  workflow_dispatch:  # Lance le pipeline manuellement depuis GitHub Actions
+  workflow_dispatch:  # Déclenchement manuel
 
 jobs:
   deploy:
@@ -9,6 +9,7 @@ jobs:
     env:
       NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL }}
       NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY }}
+
     steps:
       - name: Checkout du code
         uses: actions/checkout@v3
@@ -25,6 +26,8 @@ jobs:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
           vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
-          vercel-args: '--prebuilt'
+          vercel-args: ''  # On enlève --prebuilt
+          working-directory: ./
+          scope: ${{ secrets.VERCEL_SCOPE }}
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
