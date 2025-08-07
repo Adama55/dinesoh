@@ -22,7 +22,7 @@ export default function Header() {
         <nav className="hidden md:flex space-x-6">
           <a href="/" className="hover:underline hover:text-green-300 active:text-green-500 active:underline">Accueil</a>
           <a href="/products" className="hover:underline hover:text-green-300 active:text-green-500 active:underline">Boutique</a>
-          <a href="/about-us" className="hover:underline hover:text-green-300 active:text-green-500 active:underline">À propos de nous</a>
+          <a href="/about" className="hover:underline hover:text-green-300 active:text-green-500 active:underline">À propos de nous</a>
           <a href="/profil" className="hover:underline hover:text-green-300 active:text-green-500 active:underline">
             <User className="w-6 h-6" />
           </a>

@@ -68,4 +68,3 @@ export async function DELETE(req, { params }) {
         return new Response(JSON.stringify({ error: err.message }), { status: 500 });
     }
 }
-

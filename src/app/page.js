@@ -77,7 +77,7 @@ export default function Home() {
             href="/products"
             className="inline-block bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-xl shadow"
           >
-            Explorer la boutique
+            Explorer votre boutique 
           </a>
         </div>
       </section>
